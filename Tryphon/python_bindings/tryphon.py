@@ -51,7 +51,7 @@ class Tryphon:
             decode_c.argtypes = [POINTER(Packet), POINTER(Payload)]
             decode_c(pointer(packet_c), pointer(payload_c))
             return payload_c.content[:payload_c.length].decode("ascii")
-            # TODO: check why returned object is bigger than expected
+            # TODO: #4 investigate why returned object is bigger than expected
             # Note: extra bytes are not deterministic
 
         except Exception as e:
