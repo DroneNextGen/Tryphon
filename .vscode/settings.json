@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
+        "CMAKE",
         "Tryphon",
+        "doctest",
         "vcpkg"
     ],
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "ceedlingExplorer.projectPath": "."
 }

@@ -4,6 +4,7 @@ build/
 # Python
 __pycache__/
 *.egg-info/
+.pytest_cache/
 
 
 #Cmake
@@ -15,3 +16,7 @@ Testing/
 CMakeFiles/
 
 *.so
+
+# ceedling
+vendor/
+ceedling

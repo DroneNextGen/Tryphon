@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${vcpkgRoot}/x64-linux/include",
+                "${vcpkgRoot}/x64-linux/include/**",
                 "/usr/include/python3.8"
             ],
             "defines": [],
