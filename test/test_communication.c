@@ -51,5 +51,6 @@ void testEncodingThenDecodingWithFailure(void)
 
     free(payload.content);
     free(packet.content);
+    free(errored_packet.content);
 }
 
