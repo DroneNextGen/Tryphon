@@ -33,8 +33,12 @@ class Tryphon:
             encode_c = tryphon_api.encodePacket
             encode_c.restype = c_bool
             encode_c.argtypes = [POINTER(Packet), POINTER(Payload)]
-            encode_c(pointer(packet_c), pointer(payload_c))
+            succeed: bool = encode_c(pointer(packet_c), pointer(payload_c))
+
+            if not succeed:
+                raise CodingException(f"Failed to encode packet")
             return bytearray(string_at(packet_c.content, packet_c.length))
+            
         except Exception as e:
             raise CodingException(f"Problem with loading/calling encode: {e}")
 
@@ -49,7 +53,10 @@ class Tryphon:
             decode_c = tryphon_api.decodePacket
             decode_c.restype = c_bool
             decode_c.argtypes = [POINTER(Packet), POINTER(Payload)]
-            decode_c(pointer(packet_c), pointer(payload_c))
+            succeed: bool = decode_c(pointer(packet_c), pointer(payload_c))
+
+            if not succeed:
+                raise CodingException(f"Packet is broken")
             return payload_c.content[:payload_c.length].decode("ascii")
             # TODO: #4 investigate why returned object is bigger than expected
             # Note: extra bytes are not deterministic

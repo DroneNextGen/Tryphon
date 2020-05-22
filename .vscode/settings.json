@@ -2,5 +2,6 @@
     "cSpell.words": [
         "Tryphon",
         "vcpkg"
-    ]
+    ],
+    "python.testing.pytestEnabled": true
 }
