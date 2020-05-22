@@ -45,3 +45,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest python_bindings/
+    - name: Test wheel
+      run: |
+        pip install .
