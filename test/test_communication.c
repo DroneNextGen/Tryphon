@@ -28,3 +28,28 @@ void testEncodingThenDecoding(void)
     free(packet.content);
 }
 
+void testEncodingThenDecodingWithFailure(void)
+{
+    const char *test_string = "coucoucou";
+    const unsigned short len_test_string = 9;
+
+    struct Payload payload;
+    payload.content = (char*)malloc(len_test_string * sizeof(char));
+    strcpy(payload.content, test_string);
+    payload.length = len_test_string;
+
+    struct Packet packet;
+    encodePacket(&packet, &payload);
+
+    struct Packet errored_packet;
+    errored_packet.content = malloc(packet.length * sizeof(char));
+    strcpy(errored_packet.content, packet.content);
+    errored_packet.content[3] = 0x01;
+
+    struct Payload extracted_payload;
+    TEST_ASSERT_FALSE(decodePacket(&errored_packet, &extracted_payload));
+
+    free(payload.content);
+    free(packet.content);
+}
+
