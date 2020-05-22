@@ -9,7 +9,7 @@
 void testEncodingThenDecoding(void)
 {
     const char *test_string = "test string";
-    const unsigned short len_test_string = 9;
+    const unsigned short len_test_string = 11;
 
     struct Payload payload;
     payload.content = (char*)malloc(len_test_string * sizeof(char));
@@ -31,7 +31,7 @@ void testEncodingThenDecoding(void)
 void testEncodingThenDecodingWithFailure(void)
 {
     const char *test_string = "test string";
-    const unsigned short len_test_string = 9;
+    const unsigned short len_test_string = 11;
 
     struct Payload payload;
     payload.content = (char*)malloc(len_test_string * sizeof(char));
