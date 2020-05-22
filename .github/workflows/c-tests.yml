@@ -29,7 +29,7 @@ jobs:
     - name: Create ceedling environment
       run: |
         cd ..
-        ceedling upgrade --local --no_configs Tryphon
+        ceedling new --local Tryphon
         cd Tryphon
         
     - name: Build
