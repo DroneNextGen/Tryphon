@@ -8,7 +8,7 @@
 
 void testEncodingThenDecoding(void)
 {
-    const char *test_string = "coucoucou";
+    const char *test_string = "test string";
     const unsigned short len_test_string = 9;
 
     struct Payload payload;
@@ -30,7 +30,7 @@ void testEncodingThenDecoding(void)
 
 void testEncodingThenDecodingWithFailure(void)
 {
-    const char *test_string = "coucoucou";
+    const char *test_string = "test string";
     const unsigned short len_test_string = 9;
 
     struct Payload payload;
