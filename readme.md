@@ -6,13 +6,34 @@ A lightweight and robust communication protocol
 
 ![Test Python package][test-python-ci-badge]
 
-# Prerequisites
+# Install
+
+## Python
+
+### Prerequisites
 
 * Python 3.7
-* [vcpkg](https://github.com/Microsoft/vcpkg)
+
+### Steps
 
 ``` bash
-./vcpkg install gtest
+pip install git+https://github.com/DroneNextGen/Tryphon
+```
+
+# Use
+
+## Python
+
+``` python
+from Tryphon import Tryphon
+
+message = "test message"
+
+encoded = Tryphon.encode(message)
+print(encoded)
+
+decoded = Tryphon.decode(encoded)
+print(decoded)
 ```
 
 [test-python-ci-badge]: https://github.com/DroneNextGen/Tryphon/workflows/Test%20Python%20package/badge.svg
