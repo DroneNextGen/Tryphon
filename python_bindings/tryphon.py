@@ -5,7 +5,7 @@ from typing import List
 
 module_path = os.path.abspath(__file__)
 dir_path = os.path.dirname(module_path)
-tryphon_api = CDLL(os.path.join(dir_path, "tryphonlib.so"))
+tryphon_api = CDLL(os.path.join(dir_path, "libtryphon.so"))
 
 c_ubyte_p = POINTER(c_ubyte)
 
