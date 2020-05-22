@@ -25,8 +25,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dev dependancies
       run: |
-        apt update
-        apt install -y cmake
+        sudo apt update
+        sudo apt install -y cmake
     - name: Create Tryphon lib
       run: |
         cmake .
