@@ -1,7 +1,10 @@
 bin/
 build/
+
+# Python
 __pycache__/
-*.so
+*.egg-info/
+
 
 #Cmake
 *.cmake
@@ -10,3 +13,5 @@ Makefile
 DartConfiguration.tcl
 Testing/
 CMakeFiles/
+
+*.so
