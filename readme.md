@@ -25,7 +25,7 @@ pip install git+https://github.com/DroneNextGen/Tryphon
 ## Python
 
 ``` python
-from Tryphon import Tryphon
+from tryphon import Tryphon
 
 message = "test message"
 

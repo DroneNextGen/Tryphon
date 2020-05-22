@@ -8,6 +8,8 @@ setup(
     author='Clément Trassoudaine',
     author_email='clement.trassoudaine@eurecom.fr',
     license='MIT',
-    packages=['python_bindings'],
     install_requires=[],
+    packages=['tryphon'],
+    package_dir={'tryphon': 'python_bindings'},
+    package_data={'tryphon': ['libtryphon.so']},
 )
