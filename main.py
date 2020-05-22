@@ -1,3 +1,6 @@
+# /usr/bin/env python3
+# coding: utf-8
+
 #%% Import lib
 from python_bindings import Tryphon
 
