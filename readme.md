@@ -5,6 +5,7 @@ A lightweight and robust communication protocol
 ---
 
 ![Test Python package][test-python-ci-badge]
+![Test c library][test-c-ci-badge]
 
 # Install
 
@@ -37,3 +38,4 @@ print(decoded)
 ```
 
 [test-python-ci-badge]: https://github.com/DroneNextGen/Tryphon/workflows/Test%20Python%20package/badge.svg
+[test-c-ci-badge]: https://github.com/DroneNextGen/Tryphon/workflows/Test%20c%20library/badge.svg
