@@ -8,6 +8,6 @@ setup(
     author='Clément Trassoudaine',
     author_email='clement.trassoudaine@eurecom.fr',
     license='MIT',
-    packages=['tryphon'],
+    packages=['python_bindings'],
     install_requires=['ctypes'],
 )
