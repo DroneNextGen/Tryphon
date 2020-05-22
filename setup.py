@@ -9,5 +9,5 @@ setup(
     author_email='clement.trassoudaine@eurecom.fr',
     license='MIT',
     packages=['python_bindings'],
-    install_requires=['ctypes'],
+    install_requires=[],
 )
